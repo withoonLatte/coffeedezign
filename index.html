@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Dezign — Specialty Coffee & Cozy Vibes</title>
+  <meta name="description" content="Coffee Dezign ร้านกาแฟสไตล์วินเทจ เสิร์ฟกาแฟคัดพิเศษในบรรยากาศอบอุ่น พร้อมขนมอบสดใหม่ทุกวัน" />
+  <meta name="keywords" content="Coffee Dezign, ร้านกาแฟ, specialty coffee, กาแฟสด, คาเฟ่" />
+  <meta property="og:title" content="Coffee Dezign — Specialty Coffee & Cozy Vibes" />
+  <meta property="og:description" content="ดื่มด่ำกาแฟคัดพิเศษในบรรยากาศสไตล์วินเทจที่อบอุ่นใจ" />
+  <meta property="og:type" content="website" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="22" stroke="#C9A96E" stroke-width="2"/>
+            <path d="M14 20C14 20 16 14 24 14C32 14 34 20 34 20" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+            <path d="M12 22H36V28C36 33.5228 31.5228 38 26 38H22C16.4772 38 12 33.5228 12 28V22Z" fill="#C9A96E" fill-opacity="0.2" stroke="#C9A96E" stroke-width="2"/>
+            <path d="M36 24H38C40.2091 24 42 25.7909 42 28V28C42 30.2091 40.2091 32 38 32H36" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+            <path d="M20 10C20 10 21 6 24 6C27 6 28 10 28 10" stroke="#C9A96E" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+          </svg>
+        </div>
+        <span class="nav-logo-text">Coffee Dezign</span>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a href="#home" class="active">หน้าแรก</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#menu">เมนู</a>
+        <a href="#gallery">แกลเลอรี</a>
+        <a href="#contact">ติดต่อ</a>
+        <a href="#" class="nav-cta" onclick="openReservation(); return false;">จองโต๊ะ</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <img src="images/hero-coffee.png" alt="Coffee Dezign specialty coffee" />
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+      <div class="hero-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        Specialty Coffee Since 2018
+      </div>
+      <h1>กาแฟดี ๆ<br/>ที่ออกแบบมา<br/>เพื่อ<span>คุณ</span></h1>
+      <p class="hero-description">
+        สัมผัสรสชาติกาแฟคัดพิเศษจากไร่ชั้นนำ คั่วด้วยความใส่ใจ เสิร์ฟในบรรยากาศสุดอบอุ่นสไตล์วินเทจที่ Coffee Dezign
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+          ดูเมนู
+        </a>
+        <a href="#about" class="btn btn-outline">
+          เรื่องราวของเรา
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-float">
+      <div class="hero-stat">
+        <div class="stat-number">1,200+</div>
+        <div class="stat-label">ลูกค้าต่อเดือน</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-number">4.9 ★</div>
+        <div class="stat-label">คะแนนรีวิว</div>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <span>เลื่อนลง</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-images reveal-left">
+          <div class="about-img-main">
+            <img src="images/barista.png" alt="Barista crafting latte art" />
+          </div>
+          <div class="about-img-secondary">
+            <img src="images/interior.png" alt="Coffee Dezign cozy interior" />
+          </div>
+          <div class="about-experience">
+            <div class="exp-number">7+</div>
+            <div class="exp-text">ปีแห่งความหลงใหล</div>
+          </div>
+        </div>
+
+        <div class="about-content reveal-right">
+          <div class="section-tag">เกี่ยวกับเรา</div>
+          <h2 class="section-title">เรื่องราวเบื้องหลัง<br/>ทุกแก้วกาแฟ</h2>
+          <p class="about-text">
+            Coffee Dezign เกิดจากความหลงใหลในกาแฟและงานดีไซน์ เราคัดสรรเมล็ดกาแฟจากไร่ชั้นนำ นำมาคั่วด้วยกระบวนการพิถีพิถัน เพื่อให้ได้รสชาติที่สมบูรณ์แบบในทุกแก้ว ร้านของเราตกแต่งในสไตล์วินเทจผสมผสานความทันสมัย สร้างบรรยากาศที่อบอุ่นเหมือนบ้าน
+          </p>
+
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <span>เมล็ดกาแฟคัดพิเศษ</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <span>บริการด้วยรอยยิ้ม</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              </div>
+              <span>บรรยากาศอบอุ่น</span>
+            </div>
+            <div class="about-feature">
+              <div class="feature-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/><circle cx="12" cy="12" r="4"/></svg>
+              </div>
+              <span>คั่วสดทุกวัน</span>
+            </div>
+          </div>
+
+          <a href="#menu" class="btn btn-primary">
+            สำรวจเมนู
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MENU ============ -->
+  <section class="menu" id="menu">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">เมนูแนะนำ</div>
+        <h2 class="section-title">เมนูยอดนิยมของเรา</h2>
+        <p class="section-subtitle">คัดสรรมาเพื่อประสบการณ์กาแฟที่ดีที่สุดของคุณ</p>
+      </div>
+
+      <div class="menu-tabs reveal">
+        <button class="menu-tab active" data-filter="all">ทั้งหมด</button>
+        <button class="menu-tab" data-filter="hot">เครื่องดื่มร้อน</button>
+        <button class="menu-tab" data-filter="cold">เครื่องดื่มเย็น</button>
+        <button class="menu-tab" data-filter="bakery">เบเกอรี่</button>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Card 1 -->
+        <div class="menu-card reveal" data-category="hot">
+          <div class="menu-card-img">
+            <img src="images/hero-coffee.png" alt="Signature Latte" />
+            <span class="menu-card-badge">Best Seller</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Signature Latte</h3>
+            <p class="menu-card-desc">เอสเพรสโซ่คั่วกลางผสมนมสดนุ่ม ท็อปด้วยลาเต้อาร์ตสวยงาม</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿75</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="menu-card reveal" data-category="cold">
+          <div class="menu-card-img">
+            <img src="images/menu-drinks.png" alt="Iced Caramel Macchiato" />
+            <span class="menu-card-badge">New</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Iced Caramel Macchiato</h3>
+            <p class="menu-card-desc">เอสเพรสโซ่ราดคาราเมลหอมหวาน ผสมนมเย็นสดชื่น</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿85</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="menu-card reveal" data-category="hot">
+          <div class="menu-card-img">
+            <img src="images/barista.png" alt="Pour Over Drip" />
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Pour Over Drip</h3>
+            <p class="menu-card-desc">กาแฟดริปหยดน้ำช้า ๆ สกัดรสชาติเต็มที่จากเมล็ดคัดพิเศษ</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿90</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="menu-card reveal" data-category="cold">
+          <div class="menu-card-img">
+            <img src="images/menu-drinks.png" alt="Cold Brew" />
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Cold Brew</h3>
+            <p class="menu-card-desc">กาแฟสกัดเย็นนาน 18 ชั่วโมง เข้มข้น หอม นุ่มลื่น</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿80</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="menu-card reveal" data-category="bakery">
+          <div class="menu-card-img">
+            <img src="images/pastry.png" alt="Croissant & Pastry Set" />
+            <span class="menu-card-badge">Popular</span>
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Croissant & Pastry Set</h3>
+            <p class="menu-card-desc">ครัวซองต์เนยสด อบกรอบนอกนุ่มใน คู่กับขนมอบโฮมเมด</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿120</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="menu-card reveal" data-category="hot">
+          <div class="menu-card-img">
+            <img src="images/hero-coffee.png" alt="Matcha Latte" />
+          </div>
+          <div class="menu-card-body">
+            <h3 class="menu-card-name">Matcha Latte</h3>
+            <p class="menu-card-desc">มัทฉะเกรดพรีเมียมจากญี่ปุ่น ผสมนมสดอุ่น ๆ หอมละมุน</p>
+            <div class="menu-card-footer">
+              <span class="menu-card-price">฿85</span>
+              <button class="menu-card-btn" aria-label="Add to order">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="gallery" id="gallery">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">แกลเลอรี</div>
+        <h2 class="section-title">บรรยากาศภายในร้าน</h2>
+        <p class="section-subtitle">สัมผัสมุมสวย ๆ ของ Coffee Dezign ที่รอคุณอยู่</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img src="images/interior.png" alt="Coffee Dezign interior" />
+          <span class="gallery-item-label">บรรยากาศภายในร้าน</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/barista.png" alt="Latte art by barista" />
+          <span class="gallery-item-label">ศิลปะลาเต้อาร์ต</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/hero-coffee.png" alt="Coffee cup" />
+          <span class="gallery-item-label">กาแฟคัดพิเศษ</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/pastry.png" alt="Fresh pastries" />
+          <span class="gallery-item-label">ขนมอบสดใหม่</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img src="images/menu-drinks.png" alt="Variety of drinks" />
+          <span class="gallery-item-label">เมนูหลากหลาย</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURES ============ -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">ทำไมต้องเรา</div>
+        <h2 class="section-title">สิ่งที่ทำให้เราแตกต่าง</h2>
+        <p class="section-subtitle">ทุกรายละเอียดถูกออกแบบมาเพื่อประสบการณ์ที่ดีที่สุด</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3>เมล็ดคัดพิเศษ</h3>
+          <p>คัดสรรเมล็ดกาแฟ Arabica จากไร่ชั้นนำทั้งในและต่างประเทศ รับรองคุณภาพทุกล็อต</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/><circle cx="12" cy="12" r="4"/></svg>
+          </div>
+          <h3>คั่วสดทุกวัน</h3>
+          <p>เราคั่วกาแฟสดใหม่ทุกเช้าด้วยเครื่องคั่วระดับโปรเฟสชันนอล เพื่อรสชาติที่สมบูรณ์ที่สุด</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+          </div>
+          <h3>ทำด้วยใจ</h3>
+          <p>บาริสต้าผู้ชำนาญของเราใส่ใจในทุกขั้นตอนการชง เพื่อให้คุณได้กาแฟ ที่ดีที่สุดในทุกแก้ว</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-tag">รีวิวจากลูกค้า</div>
+        <h2 class="section-title">ลูกค้าพูดถึงเรา</h2>
+        <p class="section-subtitle">ความประทับใจจากลูกค้าที่เชื่อมั่นในรสชาติของเรา</p>
+      </div>
+
+      <div class="testimonial-slider reveal">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-card active" data-index="0">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">กาแฟอร่อยมากค่ะ บรรยากาศร้านสวย ตกแต่งสไตล์วินเทจเก๋ ๆ มานั่งทำงานก็สบาย พนักงานบริการดีมาก ต้องกลับมาอีกแน่นอนค่ะ!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ป</div>
+            <div class="testimonial-info">
+              <h4>คุณปรียา</h4>
+              <span>นักออกแบบกราฟิก</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-card" data-index="1">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">Signature Latte ที่นี่ต้องลอง! รสชาตินุ่มละมุน หอมกาแฟแท้ ๆ ร้านสวยมากถ่ายรูปลงโซเชียลได้ทุกมุมเลยครับ</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ธ</div>
+            <div class="testimonial-info">
+              <h4>คุณธนวัฒน์</h4>
+              <span>Content Creator</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-card" data-index="2">
+          <div class="testimonial-quote">"</div>
+          <div class="testimonial-stars">
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <p class="testimonial-text">ชอบ Cold Brew มาก หอมเข้ม ไม่ขม ดื่มง่าย ร้านนี้เปลี่ยนความคิดเรื่องกาแฟดีๆ ไม่จำเป็นต้องแพง ราคาเข้าถึงได้มากค่ะ</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">ส</div>
+            <div class="testimonial-info">
+              <h4>คุณสมหญิง</h4>
+              <span>อาจารย์มหาวิทยาลัย</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-dots">
+          <button class="testimonial-dot active" data-slide="0" aria-label="Slide 1"></button>
+          <button class="testimonial-dot" data-slide="1" aria-label="Slide 2"></button>
+          <button class="testimonial-dot" data-slide="2" aria-label="Slide 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="container">
+      <h2 class="reveal">พร้อมสัมผัสรสชาติ<br/>กาแฟที่ดีที่สุดแล้วหรือยัง?</h2>
+      <p class="reveal">เยี่ยมชมร้านของเรา หรือจองโต๊ะล่วงหน้า<br/>เพื่อประสบการณ์กาแฟสุดพิเศษ</p>
+      <a href="#" class="btn btn-primary reveal" onclick="openReservation(); return false;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        จองโต๊ะเลย
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-content reveal-left">
+          <div class="section-tag">ติดต่อเรา</div>
+          <h2 class="section-title">มาเจอกันนะ</h2>
+          <p class="contact-text">
+            เรายินดีต้อนรับคุณทุกวัน ไม่ว่าจะแวะมาจิบกาแฟ นั่งทำงาน หรือพบปะเพื่อนฝูง Coffee Dezign พร้อมเสมอ
+          </p>
+
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <h4>ที่อยู่</h4>
+                <p>123 ถนนวินเทจ แขวงกาแฟ<br/>เขตดีไซน์ กรุงเทพฯ 10100</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <h4>โทรศัพท์</h4>
+                <p>02-123-4567</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <div>
+                <h4>เวลาเปิด-ปิด</h4>
+                <p>จันทร์ - ศุกร์ : 07:00 - 20:00<br/>เสาร์ - อาทิตย์ : 08:00 - 21:00</p>
+              </div>
+            </div>
+
+            <div class="contact-info-item">
+              <div class="contact-info-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <h4>อีเมล</h4>
+                <p>hello@coffeedezign.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form reveal-right">
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">ชื่อ</label>
+                <input type="text" id="name" placeholder="ชื่อของคุณ" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">เบอร์โทร</label>
+                <input type="tel" id="phone" placeholder="08x-xxx-xxxx" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">อีเมล</label>
+              <input type="email" id="email" placeholder="email@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="message">ข้อความ</label>
+              <textarea id="message" placeholder="บอกเราว่าคุณต้องการอะไร..." rows="5"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              ส่งข้อความ
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="nav-logo">
+            <div class="nav-logo-icon">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="24" cy="24" r="22" stroke="#C9A96E" stroke-width="2"/>
+                <path d="M14 20C14 20 16 14 24 14C32 14 34 20 34 20" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+                <path d="M12 22H36V28C36 33.5228 31.5228 38 26 38H22C16.4772 38 12 33.5228 12 28V22Z" fill="#C9A96E" fill-opacity="0.2" stroke="#C9A96E" stroke-width="2"/>
+                <path d="M36 24H38C40.2091 24 42 25.7909 42 28V28C42 30.2091 40.2091 32 38 32H36" stroke="#C9A96E" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="nav-logo-text">Coffee Dezign</span>
+          </a>
+          <p>สัมผัสรสชาติกาแฟคัดพิเศษ ในบรรยากาศสไตล์วินเทจสุดอบอุ่น ที่ Coffee Dezign</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="#" aria-label="LINE">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 5.82 2 10.5c0 3.27 2.61 6.14 6.44 7.37-.09.84-.49 3.13-.51 3.33 0 0-.01.1.05.14.06.03.13.01.13.01.18-.03 2.07-1.36 2.93-2 .31.04.63.05.96.05 5.52 0 10-3.82 10-8.5S17.52 2 12 2z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>ลิงก์ด่วน</h4>
+          <ul>
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#about">เกี่ยวกับเรา</a></li>
+            <li><a href="#menu">เมนู</a></li>
+            <li><a href="#gallery">แกลเลอรี</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>บริการ</h4>
+          <ul>
+            <li><a href="#">เมล็ดกาแฟสด</a></li>
+            <li><a href="#">กาแฟดริป</a></li>
+            <li><a href="#">จัดเลี้ยง</a></li>
+            <li><a href="#">ห้องประชุม</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>เวลาเปิดทำการ</h4>
+          <ul>
+            <li><a href="#">จันทร์-ศุกร์: 07:00-20:00</a></li>
+            <li><a href="#">เสาร์-อาทิตย์: 08:00-21:00</a></li>
+            <li><a href="#">วันหยุดนักขัตฤกษ์: 09:00-18:00</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Coffee Dezign. All rights reserved.</p>
+        <p>Designed with ☕ & ❤️</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ RESERVATION MODAL ============ -->
+  <div class="rsv-overlay" id="rsvOverlay"></div>
+  <div class="rsv-modal" id="rsvModal">
+    <!-- Close button -->
+    <button class="rsv-close" id="rsvClose" aria-label="Close reservation">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <!-- Progress steps -->
+    <div class="rsv-progress">
+      <div class="rsv-step-indicator active" data-step="1">
+        <div class="rsv-step-circle">1</div>
+        <span>เลือกวัน-เวลา</span>
+      </div>
+      <div class="rsv-step-line"></div>
+      <div class="rsv-step-indicator" data-step="2">
+        <div class="rsv-step-circle">2</div>
+        <span>ข้อมูลผู้จอง</span>
+      </div>
+      <div class="rsv-step-line"></div>
+      <div class="rsv-step-indicator" data-step="3">
+        <div class="rsv-step-circle">3</div>
+        <span>ยืนยัน</span>
+      </div>
+    </div>
+
+    <!-- Step 1: Date, Time, Guests -->
+    <div class="rsv-step-content active" id="rsvStep1">
+      <h2 class="rsv-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        เลือกวันที่และเวลา
+      </h2>
+
+      <div class="rsv-form-grid">
+        <div class="rsv-field">
+          <label for="rsvDate">วันที่</label>
+          <input type="date" id="rsvDate" required />
+        </div>
+        <div class="rsv-field">
+          <label for="rsvTime">เวลา</label>
+          <select id="rsvTime" required>
+            <option value="" disabled selected>เลือกเวลา</option>
+            <option value="07:00">07:00</option>
+            <option value="08:00">08:00</option>
+            <option value="09:00">09:00</option>
+            <option value="10:00">10:00</option>
+            <option value="11:00">11:00</option>
+            <option value="12:00">12:00</option>
+            <option value="13:00">13:00</option>
+            <option value="14:00">14:00</option>
+            <option value="15:00">15:00</option>
+            <option value="16:00">16:00</option>
+            <option value="17:00">17:00</option>
+            <option value="18:00">18:00</option>
+            <option value="19:00">19:00</option>
+            <option value="20:00">20:00</option>
+          </select>
+        </div>
+        <div class="rsv-field">
+          <label for="rsvGuests">จำนวนคน</label>
+          <div class="rsv-guest-picker">
+            <button type="button" class="rsv-guest-btn" id="guestMinus" aria-label="Decrease guests">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+            <span class="rsv-guest-count" id="guestCount">2</span>
+            <button type="button" class="rsv-guest-btn" id="guestPlus" aria-label="Increase guests">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="rsv-field">
+          <label>โซนที่นั่ง</label>
+          <div class="rsv-zone-picker">
+            <button type="button" class="rsv-zone-btn active" data-zone="indoor">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              ในร้าน
+            </button>
+            <button type="button" class="rsv-zone-btn" data-zone="outdoor">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              กลางแจ้ง
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Table map -->
+      <div class="rsv-table-map">
+        <h3 class="rsv-map-title">เลือกโต๊ะ</h3>
+        <div class="rsv-map-legend">
+          <span class="rsv-legend-item"><span class="rsv-legend-dot available"></span> ว่าง</span>
+          <span class="rsv-legend-item"><span class="rsv-legend-dot selected"></span> เลือกแล้ว</span>
+          <span class="rsv-legend-item"><span class="rsv-legend-dot occupied"></span> ไม่ว่าง</span>
+        </div>
+        <div class="rsv-map-grid" id="tableMap">
+          <!-- Tables will be generated by JS -->
+        </div>
+      </div>
+
+      <div class="rsv-actions">
+        <button type="button" class="btn btn-primary rsv-next-btn" id="rsvNext1" disabled>
+          ถัดไป
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 2: Personal info -->
+    <div class="rsv-step-content" id="rsvStep2">
+      <h2 class="rsv-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        ข้อมูลผู้จอง
+      </h2>
+
+      <div class="rsv-form-grid">
+        <div class="rsv-field">
+          <label for="rsvName">ชื่อ-นามสกุล *</label>
+          <input type="text" id="rsvName" placeholder="กรอกชื่อ-นามสกุล" required />
+        </div>
+        <div class="rsv-field">
+          <label for="rsvPhone">เบอร์โทรศัพท์ *</label>
+          <input type="tel" id="rsvPhone" placeholder="08x-xxx-xxxx" required />
+        </div>
+        <div class="rsv-field rsv-field-full">
+          <label for="rsvEmail">อีเมล</label>
+          <input type="email" id="rsvEmail" placeholder="email@example.com" />
+        </div>
+        <div class="rsv-field rsv-field-full">
+          <label for="rsvNote">หมายเหตุ / ความต้องการพิเศษ</label>
+          <textarea id="rsvNote" placeholder="เช่น ต้องการเก้าอี้เด็ก, แพ้อาหาร, จัดงานวันเกิด ฯลฯ" rows="3"></textarea>
+        </div>
+      </div>
+
+      <div class="rsv-actions rsv-actions-split">
+        <button type="button" class="btn btn-outline rsv-back-btn" id="rsvBack2">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+          ย้อนกลับ
+        </button>
+        <button type="button" class="btn btn-primary rsv-next-btn" id="rsvNext2">
+          ยืนยันการจอง
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Step 3: Confirmation -->
+    <div class="rsv-step-content" id="rsvStep3">
+      <div class="rsv-success">
+        <div class="rsv-success-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h2>จองสำเร็จแล้ว!</h2>
+        <p class="rsv-success-subtitle">ขอบคุณที่เลือก Coffee Dezign ✨</p>
+
+        <div class="rsv-summary-card">
+          <div class="rsv-summary-header">
+            <span class="rsv-ref-label">หมายเลขการจอง</span>
+            <span class="rsv-ref-number" id="rsvRefNumber">CD-000000</span>
+          </div>
+          <div class="rsv-summary-body">
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              <div>
+                <strong>วันที่</strong>
+                <span id="rsvSumDate">-</span>
+              </div>
+            </div>
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <div>
+                <strong>เวลา</strong>
+                <span id="rsvSumTime">-</span>
+              </div>
+            </div>
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <div>
+                <strong>จำนวน</strong>
+                <span id="rsvSumGuests">-</span>
+              </div>
+            </div>
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              <div>
+                <strong>โต๊ะ</strong>
+                <span id="rsvSumTable">-</span>
+              </div>
+            </div>
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <div>
+                <strong>ชื่อผู้จอง</strong>
+                <span id="rsvSumName">-</span>
+              </div>
+            </div>
+            <div class="rsv-summary-row">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.13.87.36 1.72.7 2.53a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.81.34 1.66.57 2.53.7A2 2 0 0122 16.92z"/></svg>
+              <div>
+                <strong>เบอร์โทร</strong>
+                <span id="rsvSumPhone">-</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="rsv-success-note">เราจะส่ง SMS ยืนยันไปที่เบอร์โทรของคุณ<br/>หากต้องการยกเลิกหรือเปลี่ยนแปลง กรุณาโทร <strong>02-123-4567</strong></p>
+
+        <div class="rsv-actions">
+          <button type="button" class="btn btn-primary" id="rsvDone">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+            กลับหน้าแรก
+          </button>
+          <button type="button" class="btn btn-outline" id="rsvViewAll" style="border-color:var(--clr-brown-light);color:var(--clr-brown)">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            ดูรายการจอง
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RESERVATIONS LIST MODAL ============ -->
+  <div class="rsv-modal rsv-list-modal" id="rsvListModal">
+    <button class="rsv-close" id="rsvListClose" aria-label="Close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <h2 class="rsv-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      รายการจองทั้งหมด
+    </h2>
+    <div class="rsv-list-wrapper" id="rsvListWrapper">
+      <p class="rsv-empty">ยังไม่มีรายการจอง</p>
+    </div>
+    <div class="rsv-actions">
+      <button type="button" class="btn btn-outline" id="rsvListBack" style="border-color:var(--clr-brown-light);color:var(--clr-brown)">
+        ปิด
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
